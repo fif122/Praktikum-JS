@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Validation</title>
+        
+        <script defer src="form.js"></script>
+
+        <style>
+            body {font-family: Arial;}
+            span{
+                display: block;
+                color: red;
+            }
+            form{
+                position: absolute;
+                left: 2%;
+                top: 7%;
+            }
+            input{
+                width: 400px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            select{
+                width: 400px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            label{
+                display: block;
+            }
+            button {
+                padding: 14px 20px;
+                margin: 8px 0;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
+            .top{
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="form" method="GET">
+
+            <div>
+                <label for="name"><b>Nama Pelanggan</b></label>
+                <input id="name" name="name" type="text">
+                <span id="error1"><b></b></span>
+            </div>
+
+            <div class="top">
+                <label><b>Email</b></label>
+                <input type="email" name="email" id="email">
+                <span id="error2"></span>
+            </div>
+
+            <div class="top">
+                <label><b>Jam keberangkatan</b></label>
+                <input type="time" name="jam" id="jam" value = "22:53:05">
+                <span id=""></span>
+            </div>
+
+            <div class="top">
+                <label><b>Tujuan keberangkatan</b></label>
+                <select id="Place" onchange="calc()">
+                    <option value="1">Gunung Fuji</option>
+                    <option value="2">Istana Osaka</option>
+                    <option value="3">Menara Tokyo</option>
+                    <option value="4">Harajuku</option>
+                    <option value="5">Danau Kawaguchi</option>
+                </select>
+            </div>
+
+            <div class="top">
+                <label><b>Jumlah Tiket</b></label>
+                <input type="number" name="tiket" id="tiket">
+                <span id="error3"></span>
+            </div>
+
+            <button type="submit" class="top" onclick="myFunction()">Submit</button>
+        </form>
+    </body>
+
+    
+</html>

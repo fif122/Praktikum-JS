@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <script defer src="Otentikasi.js"></script>
+
+        <meta charset="UTF-8">
+        <title>Log in</title>
+
+        <style type="text/css">
+            body {font-family: Arial;}
+            span{
+                display: block;
+                margin-left: 20px;
+                color: red;
+            }
+            form{
+                position: absolute;
+                left: 7%;
+                top: 7%;
+            }
+            input{
+                width: 300px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            label{
+                display: block;
+            }
+            button {
+                padding: 14px 20px;
+                margin: 8px 0;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
+            .top{
+                margin-top: 20px;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+
+        <form action="LoginSukses.html" method="POST">
+            <div>
+                <label for="username"><b>Username</b></label>
+                <input type="text" name="username" placeholder="username">
+                <span></span>
+            </div>
+            <div class="top">
+                <label for="password"><b>Password</b></label>
+                <input type="password" name="password" placeholder="password">
+                <span></span>
+            </div>
+            <button id="log-in" class="top">Log-in</button>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator Curs</title>
+
+        <style>
+            .Box1{
+                width: 260px;
+                border: 2px solid black;
+                height: 340px;
+            }
+            .Box2{
+                margin-left: 10px;
+            }
+            h2{
+                text-align: center;
+            }
+            .Line{
+                margin-top: 15px;
+            }
+            .Box3 {
+                margin-left: 10px;
+            }
+        </style>
+
+        <script>
+            function calc(){
+                var n = parseFloat(document.getElementById('n').value);
+                var place = document.getElementById('Place').value;
+                
+                if(place == '1'){
+                    document.getElementById('result').value = n*9915;
+                }
+
+                if(place == '2'){
+                    document.getElementById('result').value = n*13472;
+                }
+
+                if(place == '3'){
+                    document.getElementById('result').value = n*874;
+                }
+
+                if(place == '4'){
+                    document.getElementById('result').value = n*120;
+                }
+
+                if(place == '5'){
+                    document.getElementById('result').value = n*15888;
+                }
+
+                if(place == '6'){
+                    document.getElementById('result').value = n*3592;
+                }
+            }
+        </script>
+        
+    </head>
+
+    <body>
+    <div class="Box1">
+        <h2>Kalkulator <br/> Kurs Rupiah</h2>
+
+        <div class="Box2">
+
+            <!--Dari-->
+            <p><b>Dari : </b></p>
+        
+            <div class="Box3">
+
+                <div class="Line">
+                    <label>Negara</label><br/>
+                    <select id="Place" onchange="calc()">
+                        <option value="1">Dollar-US</option>
+                        <option value="2">Dollar-Singapore</option>
+                        <option value="3">Ringgit-Malaysia</option>
+                        <option value="4">Yen-Japan</option>
+                        <option value="5">Euro</option>
+                        <option value="6">Riyal-Saudi Arabia</option>
+                    </select>
+                </div>
+
+                <div class="Line">
+                    <label>Nilai</label><br/>
+                    <input type="number" placeholder="Masukan Angka" id="n" onchange="calc()">
+                </div>
+
+            </div>
+
+            <br/><br/>
+            <!--Nilai Rupiah-->
+            <p><b>Nilai Rupiah : </b></p>
+            <div class="Box3">
+                <input type="text" id="result">
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>

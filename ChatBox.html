@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            .Location {
+                border: 2px solid black;
+                position: absolute;
+                bottom: 8px;
+                right: 16px;
+                font-size: 18px;
+            }
+            .Note {
+                width: 294px;
+                height: 300px;
+                overflow-y: scroll;
+
+            }
+            .Answer {
+                float: left;
+            }
+            .Note p {
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+
+    <script>
+        function addRow() {
+            var text1 = document.getElementById('text1').value;
+            var table = document.getElementsByTagName('table')[0];
+            var newRow = table.insertRow(1);
+            var cel1 = newRow.insertCell(0);
+            cel1.innerHTML = text1;
+        }
+    </script>
+
+    <body>
+
+        <div class="Location">
+
+            <!--Tempat Text-->
+            <div class="Note">
+                <table>
+                    <tr><td>Hello. Apa kabar ?</td></tr>
+                </table>
+            </div>
+
+            <!--Tempat ketik pesan-->
+            <div class="Answer">
+                <input type="text" name="text1" id="text1"  size="30px">
+            </div>
+            <button onclick="addRow()">Send</button>
+
+        </div>
+
+    </body>
+</html>

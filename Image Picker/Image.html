@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Japan</title>
+        <script>
+            function pilih(){
+                let list_japan = document.getElementById("japan");
+                let idx = list_japan.selectedIndex;
+                console.log("foto pilihan anda" + list_japan[idx].value);
+
+                let area_foto =document.getElementById("foto");
+                area_foto.src="foto/"+list_japan[idx].value+".jpg";
+            }
+        </script>
+    </head>
+    <body>
+        <form id="frm1">
+            Japan Photography : <select id="japan" onchange="pilih()">
+                <option value="DanauKawaguchi">Danau Kawaguchi</option>
+                <option value="Enoshima">Enoshima</option>
+                <option value="GunungFuji">Gunung Fuji</option>
+                <option value="IstanaOsaka">Istana Osaka</option>
+                <option value="MenaraTokyo">Menara Tokyo</option>
+                <option value="ShinjukuGyoen">Shinjuku Gyoen</option>
+            </select>
+        </form>
+        <br/>
+        <img src="foto/DanauKawaguchi.jpg" alt="Danau Kawaguchi" id="foto"/>
+    </body>
+</html>
